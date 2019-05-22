@@ -1,0 +1,18 @@
+//Custom bootstrap overide code should be before importing bootstrap
+@import "custom";
+//===========
+
+//Bootstrap======== (can import specific scss file from nodemodules/bootstrap if not the whole bootstrap)
+@import "node_modules/bootstrap/scss/bootstrap";
+//=================
+
+@import "abstracts/function";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+
