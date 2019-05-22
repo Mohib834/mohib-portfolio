@@ -1,1 +1,44 @@
+html{
+    font-size: 62.5%;
+}
 
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+.intro{
+
+    &__left{
+        h1{
+            font-size:5.5rem;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            display:flex;
+            flex-direction: column;
+            span{
+                &:not(:last-child){
+                    margin-bottom:2rem;
+                }
+            }
+        }
+    }
+
+    &__right{
+
+    }
+}
+
+.quality-text{
+    position:relative;
+    &::after{
+        content:'';
+        display:block;
+        position:absolute;
+        bottom:-2rem;
+        left:0;
+        width:40%;
+        height:5px;
+        background:#000;
+    }
+}
