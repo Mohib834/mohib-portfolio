@@ -18,7 +18,7 @@ body{
             flex-direction: column;
             span{
                 &:not(:last-child){
-                    margin-bottom:2rem;
+                    margin-bottom:1rem;
                 }
             }
         }
@@ -26,19 +26,5 @@ body{
 
     &__right{
 
-    }
-}
-
-.quality-text{
-    position:relative;
-    &::after{
-        content:'';
-        display:block;
-        position:absolute;
-        bottom:-2rem;
-        left:0;
-        width:40%;
-        height:5px;
-        background:#000;
     }
 }

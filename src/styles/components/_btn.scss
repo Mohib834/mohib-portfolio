@@ -1,0 +1,16 @@
+.btn{
+    padding:1.3rem 1.5rem;
+    font-size:1.7rem;
+    display: inline-block;
+    background:$color-primary;
+    border:none;
+    color:#fff;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+
+    &:hover{
+        color:#fff;
+        background:darken($color-primary, 10%);
+    }
+}

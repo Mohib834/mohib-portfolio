@@ -22,5 +22,9 @@ nav{
     &__item{
         margin-right:2rem;
         list-style-type:none;
+
+        a:hover{
+            color: $color-primary;
+        }
     }
 }
