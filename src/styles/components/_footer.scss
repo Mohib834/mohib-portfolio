@@ -1,8 +1,10 @@
 .footer{
+    position:fixed;
+    width:92.5vw;
+    bottom:4%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom:2rem;
     padding:0 5rem;
 
     &-pagination{
