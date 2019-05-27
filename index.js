@@ -7,9 +7,5 @@ console.log(__dirname);
 
 app.use(express.static(publicDirectory));
 
-app.get('/', (req, res) => {
-
-})
-
 console.log('hello');
 app.listen(port)

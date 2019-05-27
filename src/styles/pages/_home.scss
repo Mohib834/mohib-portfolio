@@ -1,39 +1,47 @@
-.section-brand{
-    padding-top:8rem;
+section{
     height: 87vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding-bottom:2rem;
 }
 
-.intro{
-    padding-top:8rem;
-    display:flex;
-    width:90%;
-    margin:0 auto;
-    justify-content: space-between;
-
-    &__left{
-        flex: 58%;
-        margin-top:3rem;
-        a{
-            margin-top:2rem;
-        }
-    }
-
-    &__right{
-        flex:42%;
-        margin-left:2rem;
-        margin-top:-1rem;
-    }
-
-    &__banner{
-        margin-top:-3rem;
-    }
-    
-    &__img{
-        width:100%;
-        height:100%;
-        object-fit: cover;
-    }
+.section-brand {
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.intro {
+  padding-top: 8rem;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  &__left {
+    flex: 58%;
+    margin-top: 3rem;
+    a {
+      margin-top: 2rem;
+    }
+  }
+
+  &__right {
+    flex: 42%;
+    margin-left: 2rem;
+    margin-top: -1rem;
+  }
+
+  &__banner {
+    margin-top: -3rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+// =========scroll snap ======
+

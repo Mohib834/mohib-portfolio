@@ -1,0 +1,18 @@
+.contact-left{
+    padding:5rem;
+    flex:40%;
+
+    &__form{
+
+    }
+}
+
+.contact-right{
+    padding-top:5rem;
+    flex:60%;
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
