@@ -1,16 +1,37 @@
-.btn{
-    padding:1.3rem 1.5rem;
-    font-size:1.7rem;
-    display: inline-block;
-    background:$color-primary;
-    border:none;
-    color:#fff;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    cursor: pointer;
+.btn {
+  padding: 1.3rem 1.5rem;
+  font-size: 1.7rem;
+  display: inline-block;
+  background: $color-primary;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  cursor: pointer;
 
-    &:hover{
-        color:#fff;
-        background:darken($color-primary, 10%);
-    }
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+}
+
+.form-btn {
+  background: $color-primary;
+  display: block;
+  border: none;
+  color: #fff;
+  width: 38rem;
+  padding: 1rem 0;
+  border-radius: 100px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  i {
+    margin-right: 1.5rem;
+    font-size: 0.9em;
+  }
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
 }
