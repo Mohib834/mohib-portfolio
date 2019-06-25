@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start-webpack": "webpack-dev-server --mode development --open",
+    "start": "node app.js"
   },
   "author": "Mohib Arshi",
   "license": "ISC",
@@ -31,6 +32,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
     "baffle": "^0.3.6",
+    "express": "^4.17.1",
     "jquery": "^3.4.1"
   }
 }

@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mohib Arshi</title>
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="css/style.css" rel="stylesheet"></head>
+
 <body>
+
     <!-- Navbar -->
     <nav>
         <div class="navbar">
-            <a href="/" class="navbar__brand">Mohib A.</a>
+            <a href="#section-brand" class="navbar__brand">Mohib A.</a>
             <ul class="navbar__nav">
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">
+                    <a href="#section-work" class="navbar__link">
                         Work
                     </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">
+                    <a href="#section-about" class="navbar__link">
                         About
                     </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">
+                    <a href="#section-contact" class="navbar__link">
                         Contact
                     </a>
                 </li>
@@ -39,35 +42,109 @@
         </div>
     </nav>
 
-
-    <section class="section-brand">
-        <div class="intro">
-            <div class="intro__left">
-                <h1>
-                    <span>Hello!</span>
-                    <span>I'm Mohib,</span>
-                    <span class="dev-text">A Fullstack Developer.</span>
-                </h1>
-                <a class="btn btn--primary">See all work</a>
-            </div>
-            <div class="intro__right">
-                <div class="intro__banner">
-                    <img src="img/6523ea1e450efa1949c4f2c6475b6d14.png" alt="banner" class="intro__img">
+    <!-- =========sections===== -->
+    <main>
+        <a id="section-brand"></a>
+        <section class="section-brand">
+            <div>
+                <div class="intro">
+                    <div class="intro__left">
+                        <h1>
+                            <span>Hello!</span>
+                            <span>I'm Mohib,</span>
+                            <span class="dev-text">
+                                A
+                                <ul>
+                                    <li>passionate</li>
+                                    <li>self-taught</li>
+                                    <li>commited</li>
+                                </ul>
+                                MERN Developer.
+                            </span>
+                        </h1>
+                        <a class="btn btn--primary">See all work</a>
+                    </div>
+                    <div class="intro__right">
+                        <div class="intro__banner">
+                            <img src="img/6523ea1e450efa1949c4f2c6475b6d14.png" alt="banner" class="intro__img">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Should be position absolute -->
-        <div class="footer">
-            <div class="footer-social">
-                <a href="#"> <i class="fab fa-github"></i></a>
-                <a href="#"> <i class="fab fa-twitter"></i></a>
-                <a href="#"> <i class="far fa-paper-plane"></i></a>
-            </div>
+        </section>
 
-            <a href="#" class="footer-pagination">
-                <span class="footer-pagination__text">work</span>
-                <span class="footer-pagination__icon">&rarr;</span>
-            </a>
-    </section>
+        <a id="section-work"></a>
+        <section class="section-work">
+            <div>
+                <div class="projects-title">
+                    <ul>
+                        <li>Mohib's Portfolio</li>
+                        <li>The Social Network</li>
+                        <li>Ottica Grasso</li>
+                        <li>Sher</li>
+                        <li>Miti di Napoli</li>
+                    </ul>
+                </div>
+                <div class="projects-img">
+
+                </div>
+            </div>
+        </section>
+
+
+        <a id="section-about"></a>
+        <section class="section-about">
+            <div>
+                This is about page
+            </div>
+        </section>
+
+        <a id="section-contact"></a>
+        <section class="section-contact">
+            <div>
+                <div class="contact">
+                    <div class="contact-left">
+                        <h2 class="contact-left__heading">Let's create <span style="display:block;">progress
+                                together!</span>
+                        </h2>
+                        <form class="contact-left__form">
+                            <input type="text" name="name" placeholder="Your name">
+                            <input type="email" name="email" placeholder="Your email">
+                            <textarea placeholder="Your message" rows="5" cols="50"></textarea>
+                            <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
+                        </form>
+                    </div>
+                    <div class="contact-right">
+                        <img src="img/85ae72e7d9168cb5170f1125ea781655.png" alt="contact illustratioin" class="contact-right__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============= -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-social">
+            <a href="#"> <i class="fab fa-github"></i></a>
+            <a href="#"> <i class="fab fa-twitter"></i></a>
+            <a href="#"> <i class="far fa-paper-plane"></i></a>
+        </div>
+
+        <a href="javascript:void(0)" class="footer-pagination">
+            <span class="footer-pagination__text">work</span>
+            <span class="footer-pagination__icon"><i class="fa fa-arrow-right"></i></span>
+        </a>
+    </div>
+
+
+
+    <script>
+    </script>
+
 <script type="text/javascript" src="js/bundle.js"></script></body>
+
 </html>
