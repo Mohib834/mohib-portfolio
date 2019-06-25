@@ -1,30 +1,32 @@
-nav{
-    position:fixed;
-    width:100%;
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s;
 }
 
-.navbar{
-    width:90%;
-    margin:0 auto;
-    display:flex;
-    justify-content: space-between;
-    padding:2rem;
-    border-bottom:1px solid #eee;
+.navbar {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 1px solid #eee;
 
-    &__brand{
-        font-size: 2rem;
+  &__brand {
+    font-size: 2rem;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 2rem;
+    list-style-type: none;
+
+    a:hover {
+      color: $color-primary;
     }
-
-    &__nav{
-        display:flex;
-    }
-
-    &__item{
-        margin-right:2rem;
-        list-style-type:none;
-
-        a:hover{
-            color: $color-primary;
-        }
-    }
+  }
 }

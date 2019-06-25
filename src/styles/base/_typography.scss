@@ -1,37 +1,59 @@
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-body{
-    font-family: 'Karla', sans-serif;
-    font-size: 16px;
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
 }
 
-.intro{
-
-    &__left{
-        h1{
-            font-size:5rem;
-            font-weight: 300;
-            letter-spacing: 1.5px;
-            display:flex;
-            flex-direction: column;
-            span{
-                &:not(:last-child){
-                    margin-bottom:1rem;
-                }
-            }
+.intro {
+  &__left {
+    h1 {
+      font-size: 5rem;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      display: flex;
+      flex-direction: column;
+      span {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
         }
+      }
     }
+  }
 
-    &__right{
-
-    }
+  &__right {
+  }
 }
 
-.contact-left{
-    &__heading{
-        font-size:4.2rem;
-        letter-spacing:1.2px;
-    }
+.contact-left {
+  &__heading {
+    font-size: 4.2rem;
+    letter-spacing: 1.2px;
+  }
+}
+
+.dev-text {
+  display: flex;
+  font-size: 4rem;
+}
+
+.dev-text ul {
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  height: 6rem;
+  width: 24.5rem;
+  color: $color-primary;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  li {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    animation: change 10s linear infinite;
+    opacity: 0;
+  }
 }

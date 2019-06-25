@@ -1,17 +1,13 @@
-section{
-    height: 87vh;
-    padding-bottom:2rem;
-}
-
-.section-brand {
-  padding-top: 8rem;
+section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  transition: all 0.5s 0.5s;
 }
 
 .intro {
-  padding-top: 8rem;
+  // padding-top: 8rem;
   display: flex;
   width: 90%;
   margin: 0 auto;
@@ -41,3 +37,19 @@ section{
     object-fit: cover;
   }
 }
+
+// =========== js styles ========
+.rotateTop {
+  transform: rotateZ(-90deg);
+}
+
+.nav-shadow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.navbarBorderRemove {
+  border-bottom: none;
+}
+
+// ==============================

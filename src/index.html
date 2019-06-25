@@ -16,20 +16,20 @@
     <!-- Navbar -->
     <nav>
         <div class="navbar">
-            <a href="/" class="navbar__brand">Mohib A.</a>
+            <a href="#section-brand" class="navbar__brand">Mohib A.</a>
             <ul class="navbar__nav">
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">
+                    <a href="#section-work" class="navbar__link">
                         Work
                     </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">
+                    <a href="#section-about" class="navbar__link">
                         About
                     </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">
+                    <a href="#section-contact" class="navbar__link">
                         Contact
                     </a>
                 </li>
@@ -43,58 +43,85 @@
     </nav>
 
     <!-- =========sections===== -->
-    <section class="section-brand">
-        <div class="intro">
-            <div class="intro__left">
-                <h1>
-                    <span>Hello!</span>
-                    <span>I'm Mohib,</span>
-                    <span class="dev-text">A Fullstack Developer.</span>
-                </h1>
-                <a class="btn btn--primary">See all work</a>
-            </div>
-            <div class="intro__right">
-                <div class="intro__banner">
-                    <img src="./img/banner.png" alt="banner" class="intro__img">
+    <main>
+        <a id="section-brand"></a>
+        <section class="section-brand">
+            <div>
+                <div class="intro">
+                    <div class="intro__left">
+                        <h1>
+                            <span>Hello!</span>
+                            <span>I'm Mohib,</span>
+                            <span class="dev-text">
+                                A
+                                <ul>
+                                    <li>passionate</li>
+                                    <li>self-taught</li>
+                                    <li>commited</li>
+                                </ul>
+                                MERN Developer.
+                            </span>
+                        </h1>
+                        <a class="btn btn--primary">See all work</a>
+                    </div>
+                    <div class="intro__right">
+                        <div class="intro__banner">
+                            <img src="./img/banner.png" alt="banner" class="intro__img">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        <a id="section-work"></a>
+        <section class="section-work">
+            <div>
+                <div class="projects-title">
+                    <ul>
+                        <li>Mohib's Portfolio</li>
+                        <li>The Social Network</li>
+                        <li>Ottica Grasso</li>
+                        <li>Sher</li>
+                        <li>Miti di Napoli</li>
+                    </ul>
+                </div>
+                <div class="projects-img">
 
-    <section class="section-work">
-        <div class="projects-title">
-            <ul>
-                <li>Mohib's Portfolio</li>
-                <li>The Social Network</li>
-                <li>Ottica Grasso</li>
-                <li>Sher</li>
-                <li>Miti di Napoli</li>
-            </ul>
-        </div>
-        <div class="projects-img">
-
-        </div>
-    </section>
-
-
-
-    <section class="section-contact">
-        <div class="contact">
-            <div class="contact-left">
-                <h2 class="contact-left__heading">Let's create <span style="display:block;">progress together!</span></h2>
-                <form class="contact-left__form">
-                    <input type="text" name="name" placeholder="Your name">
-                    <input type="email" name="email" placeholder="Your email">
-                    <textarea placeholder="Your message" rows="5" cols="50"></textarea>
-                    <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
-                </form>
+                </div>
             </div>
-            <div class="contact-right">
-                <img src="./img/contact.png" alt="contact illustratioin" class="contact-right__img">
+        </section>
+
+
+        <a id="section-about"></a>
+        <section class="section-about">
+            <div>
+                This is about page
             </div>
-        </div>
-    </section>
+        </section>
+
+        <a id="section-contact"></a>
+        <section class="section-contact">
+            <div>
+                <div class="contact">
+                    <div class="contact-left">
+                        <h2 class="contact-left__heading">Let's create <span style="display:block;">progress
+                                together!</span>
+                        </h2>
+                        <form class="contact-left__form">
+                            <input type="text" name="name" placeholder="Your name">
+                            <input type="email" name="email" placeholder="Your email">
+                            <textarea placeholder="Your message" rows="5" cols="50"></textarea>
+                            <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
+                        </form>
+                    </div>
+                    <div class="contact-right">
+                        <img src="./img/contact.png" alt="contact illustratioin" class="contact-right__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 
     <!-- ============= -->
@@ -107,13 +134,16 @@
             <a href="#"> <i class="far fa-paper-plane"></i></a>
         </div>
 
-        <a href="#" class="footer-pagination">
+        <a href="javascript:void(0)" class="footer-pagination">
             <span class="footer-pagination__text">work</span>
-            <span class="footer-pagination__icon">&rarr;</span>
+            <span class="footer-pagination__icon"><i class="fa fa-arrow-right"></i></span>
         </a>
     </div>
 
 
+
+    <script>
+    </script>
 
 </body>
 
