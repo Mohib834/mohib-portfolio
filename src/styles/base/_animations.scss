@@ -42,3 +42,17 @@
     animation-delay: 8s;
   }
 }
+
+@keyframes inandout {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: 1rem;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}

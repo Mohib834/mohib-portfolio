@@ -31,4 +31,10 @@ const showPage = () => {
     elements.sections[state.pageIdx].scrollIntoView({ behavior: 'smooth' });
 }
 
+function toSlide() {
+    elements.sliderNavigation.forEach(el => el.classList.remove('active'));
+    this.classList.add('active');
+}
+
 elements.paginationBtn.addEventListener('click', showPage);
+elements.sliderNavigation.forEach(el => el.addEventListener('click', toSlide));

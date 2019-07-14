@@ -6,6 +6,8 @@ const elements = {
     paginationBtnIcon: document.querySelector('.footer-pagination__icon'),
     nav: document.querySelector('nav'),
     navbar: document.querySelector('.navbar'),
+    slides: document.querySelectorAll('.slide'),
+    sliderNavigation: document.querySelectorAll('.slider-navbar li')
 }
 
 function throttle(fn, wait) {
