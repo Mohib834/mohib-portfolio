@@ -1,68 +1,73 @@
-.contact{
-    max-width: 114rem;
-    margin:0 auto;
-    display:flex;
-    justify-content: space-evenly;
+.contact {
+  // max-width: 114rem;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: $shadow-light;
+  width: 90%;
+  height: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
-.contact-left{
-    padding:4rem;
-    background:#fff;
-    border-radius: 5px;
-    z-index: 10;
-    box-shadow: $shadow-light;
-    height:33rem;
-    margin-left:10rem;
+.contact-left {
+  padding: 4rem;
+  background: #fff;
+  border-radius: 5px;
+  // box-shadow: $shadow-light;
+  height: 33rem;
+  margin-left: 10rem;
+  margin-top: 3rem;
 
-    &__heading{
-        margin-top: -1.5rem;
-        margin-bottom:2rem;
-        margin-left:-1rem;
-        font-size:3.5rem;
+  &__heading {
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    margin-left: -1rem;
+    font-size: 3.5rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    width: 36rem;
+
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
     }
 
-    &__form{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top:1rem;
-        width:36rem;
+    input {
+      width: 100%;
+      padding: 1rem;
+      background: #f7f7f7;
+      border: none;
+      font-family: inherit;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
 
-        & > *:not(:last-child){
-            margin-bottom: 1rem;
-        }
-        
-        input{
-            width:100%;
-            padding:1rem;
-            background:#f7f7f7;
-            border:none;
-            font-family: inherit;
-            border-bottom: 3px solid transparent;
-            transition:all .2s;
-
-
-            &:focus{
-                outline:none;
-                border-bottom: 3px solid $color-primary;
-            }
-        }
-
-        textarea{
-            width:100%;
-            outline:none;
-            background:#f7f7f7;
-            font-family: inherit;
-            border: none;
-            padding:1rem;
-            margin-bottom:2.3rem !important;    
-        }
+      &:focus {
+        outline: none;
+        border-bottom: 3px solid $color-primary;
+      }
     }
+
+    textarea {
+      width: 100%;
+      outline: none;
+      background: #f7f7f7;
+      font-family: inherit;
+      border: none;
+      padding: 1rem;
+      margin-bottom: 2.3rem !important;
+    }
+  }
 }
 
-.contact-right{
-    padding-top:2rem;
-    &__img{
-        width:71rem;
-    }
+.contact-right {
+  margin-top: 3rem;
+  &__img {
+    width: 69rem;
+  }
 }

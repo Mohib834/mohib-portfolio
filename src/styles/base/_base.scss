@@ -5,9 +5,28 @@
 
 body {
   overflow: hidden;
+  cursor: none;
+}
+
+body,
+a,
+input,
+button,
+textarea {
+  cursor: none !important;
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+
+section > div {
+  // opacity: 0;
+  // transform: translateY(150px);
+  // transition: all 1s ease-out 0.7s;
+}
+
+section > div.showPage {
+  opacity: 1;
 }

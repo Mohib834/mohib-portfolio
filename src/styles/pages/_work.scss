@@ -1,0 +1,31 @@
+.section-work {
+  width: 100vw;
+  height: 100vh;
+}
+
+.work {
+  box-sizing: border-box;
+  height: 75%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 7rem;
+  box-shadow: $shadow-light;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__content {
+    width: 217px;
+    height: 217px;
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

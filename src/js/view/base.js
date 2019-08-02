@@ -6,22 +6,18 @@ const elements = {
     paginationBtnIcon: document.querySelector('.footer-pagination__icon'),
     nav: document.querySelector('nav'),
     navbar: document.querySelector('.navbar'),
+    slider: document.querySelector('.slider'),
+    slideContainer: document.querySelector('.home-slider'),
     slides: document.querySelectorAll('.slide'),
-    sliderNavigation: document.querySelectorAll('.slider-navbar li')
-}
-
-function throttle(fn, wait) {
-    var time = Date.now();
-    return function () {
-        if ((time + wait - Date.now()) < 0) {
-            fn();
-            time = Date.now();
-        }
-    }
+    sliderNavigation: document.querySelectorAll('.slider-navbar li'),
+    sectionWork: document.querySelector('.section-work'),
+    cursor: document.querySelector('.cursor'),
+    cursorInner: document.querySelector('.cursor--inner'),
+    cursorOuter: document.querySelector('.cursor--outer'),
+    anchors: document.querySelectorAll('a')
 }
 
 
 module.exports = {
-    throttle,
     elements
 }

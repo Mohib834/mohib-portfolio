@@ -33,6 +33,8 @@
     "@babel/polyfill": "^7.4.0",
     "baffle": "^0.3.6",
     "express": "^4.17.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1",
+    "tiny-slider": "^2.9.2"
   }
 }

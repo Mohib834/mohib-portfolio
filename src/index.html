@@ -9,10 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav>
         <div class="navbar">
@@ -44,114 +47,125 @@
 
     <!-- =========sections===== -->
     <main>
+        <div class="cursor">
+            <div class="cursor--outer"></div>
+            <div class="cursor--inner"></div>
+        </div>
         <a id="section-brand"></a>
         <section class="section-brand">
-            <div>
-                <div class="intro">
-                    <div class="intro__left">
-                        <h1>
-                            <span>Hello!</span>
-                            <span>I'm Mohib,</span>
-                            <span class="dev-text">
-                                A
-                                <ul>
-                                    <li>passionate</li>
-                                    <li>self-taught</li>
-                                    <li>commited</li>
-                                    <li>visionary</li>
-                                    <li>dedicated</li>
-                                </ul>
-                                MERN Developer.
-                            </span>
-                        </h1>
-                        <a class="btn btn--primary">See all work</a>
-                    </div>
-                    <div class="intro__right">
-                        <div class="intro__banner">
-                            <img src="./img/banner.png" alt="banner" class="intro__img">
-                        </div>
-                    </div>
+            <div class="intro">
+                <div class="intro__sec intro__sec--left">
+                    <span href="javascript:void(0)" class="intro__scroll">
+                        scroll
+                        <span class="arrow arrow-infinite">&rarr;</span>
+                    </span>
                 </div>
+                <div class="intro__text">
+                    <span style="color:#fff">HEL</span>
+                    <span>LO !</span>
+                </div>
+                <div class="intro__sec intro__sec--right"></div>
             </div>
         </section>
 
         <a id="section-work"></a>
         <section class="section-work">
-            <div class="home-slider">
-                <div class="slide">
-                    <div class="slide__left">
-                        <div class="work-gallery">
-
-                        </div>
-                    </div>
-                    <div class="slide__right">
-                        <div class="work-detail">
-                            <div class="work-detail__sec">
-                                React Web Project
-                                <span class="dash"></span>
-                            </div>
-                            <div class="work-detail__pri">
-                                React <span style="display:block;">Color Palette</span>
-                            </div>
-                            <a href="#" class="work-detail__btn">View <span class="arrow">&rarr;</span> </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="slide fade">
-                    <div class="slide__left">
-                        <div class="work-gallery">
-
-                        </div>
-                    </div>
-                    <div class="slide__right">
-                        <div class="work-detail">
-                            <div class="work-detail__sec">
-                                React Web Project
-                                <span class="dash"></span>
-                            </div>
-                            <div class="work-detail__pri">
-                                React <span style="display:block;">Movie App</span>
-                            </div>
-                            <a href="#" class="work-detail__btn">View <span class="arrow">&rarr;</span> </a>
-                        </div>
-                    </div>
-                </div> -->
-                <ul class="slider-navbar">
-                    <li class="active" data-slide="0"></li>
-                    <li data-slide="1"></li>
-                    <li data-slide="2"></li>
-                    <li data-slide="3"></li>
-                </ul>
+            <div class="work">
+                <a href="https://jonas-natour-project.herokuapp.com" target="_blank" class="work__content">
+                    <img src="./img/natours.png" alt="natours project">
+                </a>
+                <a class="work__content" href="https://brad-vidjot.herokuapp.com/" target="_blank">
+                    <img src="./img/vidjot.png" alt="vidjot project">
+                </a>
+                <a class="work__content" href="https://colt-dad-jokes.herokuapp.com/" target="_blank">
+                    <img src="./img/dadjokes.png">
+                </a>
+                <a class="work__content" target="_blank">
+                    <img src="https://picsum.photos/200/300">
+                </a>
+                <a class="work__content" target="_blank">
+                    <img src="https://picsum.photos/200/300">
+                </a>
+                <a class="work__content" target="_blank">
+                    <img src="https://picsum.photos/200/300">
+                </a>
+                <a class="work__content" target="_blank">
+                    <img src="https://picsum.photos/200/300">
+                </a>
+                <a class="work__content" target="_blank">
+                    <img src="https://picsum.photos/200/300">
+                </a>
+                <a class="work__content" target="_blank">
+                    <img src="https://picsum.photos/200/300">
+                </a>
+                <a class="work__content" target="_blank">
+                    <img src="https://picsum.photos/200/300">
+                </a>
             </div>
-
         </section>
 
 
         <a id="section-about"></a>
         <section class="section-about">
-            <div>
-                This is about page
+            <div class="about">
+                <div class="circle circle-top"></div>
+                <div class="circle circle-bottom"></div>
+                <div class="about__top">
+                    <h2>About Me</h2>
+                    <span></span>
+                </div>
+                <div class="about__main">
+                    <div class="about__left">
+                        <h1 class="about__title">Mohib Arshi.</h1>
+                        <p class="about__text">
+                            Hello, my name is Mohib Arshi. <br /> I am a MERN stack developer with good designing
+                            skills.<br />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse accusantium incidunt
+                            asperiores molestiae eligendi, numquam ad autem voluptatum quo ipsum optio, officia illum
+                            voluptate accusamus eos itaque. Voluptatibus, unde placeat.
+                        </p>
+                        <h1 class="about__title about__title--sm">Skills</h1>
+                        <div class="about__skills">
+                            <div id="frontend">
+                                <img class="about__skill" src="./img/html5.png">
+                                <img class="about__skill" src="./img/css3.png">
+                                <img class="about__skill" src="./img/scss.png">
+                                <img class="about__skill" src="./img/js.png">
+                                <img class="about__skill" src="./img/react.png">
+                                <img class="about__skill" src="./img/jquery.png">
+                                <img class="about__skill" src="./img/webpack.png">
+                            </div>
+                            <div id="backend">
+                                <img class="about__skill" src="./img/nodejs.png">
+                                <img class="about__skill" src="./img/expressjs.png">
+                                <img class="about__skill" src="./img/mongodb.png">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__right">
+                        <img src="" alt="" class="about__me">
+                    </div>
+                </div>
             </div>
         </section>
 
         <a id="section-contact"></a>
         <section class="section-contact">
-            <div>
-                <div class="contact">
-                    <div class="contact-left">
-                        <h2 class="contact-left__heading">Let's create <span style="display:block;">progress
-                                together!</span>
-                        </h2>
-                        <form class="contact-left__form">
-                            <input type="text" name="name" placeholder="Your name">
-                            <input type="email" name="email" placeholder="Your email">
-                            <textarea placeholder="Your message" rows="5" cols="50"></textarea>
-                            <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
-                        </form>
-                    </div>
-                    <div class="contact-right">
-                        <img src="./img/contact.png" alt="contact illustratioin" class="contact-right__img">
-                    </div>
+            <div class="contact">
+                <div class="contact-left">
+                    <h2 class="contact-left__heading">Let's create <span style="display:block;">progress
+                            together!</span>
+                    </h2>
+                    <form class="contact-left__form">
+                        <input type="text" name="name" placeholder="Your name">
+                        <input type="email" name="email" placeholder="Your email">
+                        <textarea placeholder="Your message" rows="5" cols="50"></textarea>
+                        <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <img src="./img/contact.png" alt="contact illustratioin" class="contact-right__img">
                 </div>
             </div>
         </section>
@@ -174,11 +188,6 @@
             <span class="footer-pagination__icon"><i class="fa fa-arrow-right"></i></span>
         </a>
     </div>
-
-
-
-    <script>
-    </script>
 
 </body>
 

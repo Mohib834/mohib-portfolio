@@ -1,0 +1,46 @@
+.cursor {
+  & > div {
+    z-index: 9999;
+    pointer-events: none;
+  }
+  &--outer {
+    width: 18px;
+    height: 18px;
+    border-radius: 100px;
+    border: 2px solid $color-primary;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+
+  &--inner {
+    z-index: -1;
+    background: $color-primary;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: translate 0.5s ease;
+    transform: translate(-50%, -50%);
+  }
+
+  &--white {
+    border-color: #fff;
+  }
+
+  &--whiteBg {
+    background: #fff;
+  }
+}
+
+.cursor--outer.expand {
+  width: 35px;
+  height: 35px;
+}
+
+.cursor--inner.center {
+  transform: translate(5px, 5px);
+}

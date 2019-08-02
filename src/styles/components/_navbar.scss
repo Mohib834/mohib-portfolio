@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   transition: all 0.3s;
 }
 
@@ -11,6 +11,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
+  background: #fff;
   // border-bottom: 1px solid #eee;
 
   &__brand {
@@ -22,11 +23,16 @@ nav {
   }
 
   &__item {
-    margin-right: 2rem;
     list-style-type: none;
+    a {
+      padding: 0 1rem;
+      &:hover {
+        color: $color-primary;
+      }
+    }
 
-    a:hover {
-      color: $color-primary;
+    &:last-child a {
+      padding-right: 0;
     }
   }
 }
