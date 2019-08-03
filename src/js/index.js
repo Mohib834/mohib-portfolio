@@ -9,7 +9,24 @@ const state = {
     lastTime: 0
 }
 
+// Page scroll and menu navigation (navbar)
+
+elements.navItem.forEach((item, idx) => {
+    item.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (this.innerText.toLowerCase() === 'resume') return;
+
+        elements.paginationBtnText.innerText = state.pageBtnTextArr[idx]
+        const pagePath = this.getAttribute('href');
+        document.querySelector(pagePath).scrollIntoView({ behavior: 'smooth' });
+
+
+    })
+})
+
 // Page scroll and menu navigation (footer)
+
 const showPage = (num) => {
     // if pageidx is not equal to length of section then add 1;
     if (num === 1) {
@@ -40,6 +57,7 @@ const showPage = (num) => {
 //Showing the first page on load
 window.onload = () => {
     elements.sections[0].children[0].classList.add('showPage');
+    elements.homeTitleE.style.transform = 'rotateY(720deg)';
 }
 
 
@@ -78,6 +96,7 @@ document.addEventListener('mousemove', e => {
         x: e.pageX - 10,
         y: e.pageY - 10
     }
+    elements.cursor.style.opacity = '1';
     elements.cursorInner.style.top = `${mouse.y + 10}px`
     elements.cursorInner.style.left = `${mouse.x + 10}px`
     elements.cursorOuter.style.transform = `translate(${mouse.x - 1}px,${mouse.y - 1}px)`
@@ -94,25 +113,50 @@ document.addEventListener('mousemove', e => {
 })
 
 //Expansion of cursor on anchor
-elements.anchors.forEach(anchor => {
-    anchor.addEventListener('mouseover', () => {
-        elements.cursorOuter.classList.add('expand');
-        elements.cursorInner.classList.add('center');
+const onElExp = {
+    anchors: elements.anchors,
+    workNavLinks: elements.workNav
+}
+
+for (let el in onElExp) {
+    onElExp[el].forEach(item => {
+        item.addEventListener('mouseover', () => {
+            elements.cursorOuter.classList.add('expand');
+            elements.cursorInner.classList.add('center');
+        })
     })
-    anchor.addEventListener('mouseout', () => {
-        elements.cursorOuter.classList.remove('expand');
-        elements.cursorInner.classList.remove('center');
+    onElExp[el].forEach(item => {
+        item.addEventListener('mouseout', () => {
+            elements.cursorOuter.classList.remove('expand');
+            elements.cursorInner.classList.remove('center');
+        })
+    })
+}
+//===================================
+
+// ======== Work slider code ========
+elements.workNav.forEach(navBtn => {
+    navBtn.addEventListener('click', function () {
+        const slideNo = this.dataset.workid;
+        const slide = elements.workCarousel[slideNo];
+
+
+        // removing styles from other carousels item.
+        elements.workCarousel.forEach(carousel => {
+            carousel.querySelector('.work__left').classList.remove('work__left-animate')
+            carousel.querySelector('.work__right').classList.remove('work__right-animate')
+        })
+        // Animating exsisting slide
+        slide.querySelector('.work__left').classList.add('work__left-animate');
+        slide.querySelector('.work__right').classList.add('work__right-animate');
+
+        // UI for selected btn
+        elements.workNav.forEach(navBtn => navBtn.classList.remove('work-navbtn-active'));
+        this.classList.add('work-navbtn-active')
     })
 })
 
-//UI of cursor on click
-
-
-
 //===================================
-
-
-
 
 
 

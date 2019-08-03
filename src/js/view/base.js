@@ -6,15 +6,15 @@ const elements = {
     paginationBtnIcon: document.querySelector('.footer-pagination__icon'),
     nav: document.querySelector('nav'),
     navbar: document.querySelector('.navbar'),
-    slider: document.querySelector('.slider'),
-    slideContainer: document.querySelector('.home-slider'),
-    slides: document.querySelectorAll('.slide'),
-    sliderNavigation: document.querySelectorAll('.slider-navbar li'),
+    navItem: document.querySelectorAll('.navbar a'),
     sectionWork: document.querySelector('.section-work'),
     cursor: document.querySelector('.cursor'),
     cursorInner: document.querySelector('.cursor--inner'),
     cursorOuter: document.querySelector('.cursor--outer'),
-    anchors: document.querySelectorAll('a')
+    anchors: document.querySelectorAll('a'),
+    workCarousel: document.querySelectorAll('.work__carousel > div'),
+    workNav: document.querySelectorAll('.work__nav ul li'),
+    homeTitleE: document.querySelector('.intro__text .e')
 }
 
 
