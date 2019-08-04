@@ -158,6 +158,12 @@ elements.workNav.forEach(navBtn => {
 
 //===================================
 
+// Hamburger Menu functionality
+elements.hamburgerMenu.onclick = function () {
+    this.classList.toggle('open');
+    elements.menu.classList.toggle('mobile-menu');
+}
+
 
 
 

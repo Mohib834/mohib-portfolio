@@ -37,6 +37,10 @@
   &--whiteBg {
     background: #fff;
   }
+
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .cursor--outer.expand {

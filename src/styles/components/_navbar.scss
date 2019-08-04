@@ -1,6 +1,6 @@
 nav {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   transition: all 0.3s;
 }
@@ -12,20 +12,53 @@ nav {
   justify-content: space-between;
   padding: 2rem;
   background: #fff;
+  position: relative;
   // border-bottom: 1px solid #eee;
-
+  @include respond(phone) {
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: initial;
+  }
   &__brand {
     font-size: 2rem;
   }
 
   &__nav {
     display: flex;
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4rem;
+      background: #fff;
+      height: 0;
+      opacity: 0;
+      text-transform: uppercase;
+      transition: all 0.5s;
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__nav.mobile-menu {
+    height: 150px;
+    opacity: 1;
+    z-index: 2;
   }
 
   &__item {
     list-style-type: none;
+    @include respond(phone) {
+      margin: 1rem auto;
+    }
     a {
       padding: 0 1rem;
+      @include respond(phone) {
+        padding: 0;
+      }
       &:hover {
         color: $color-primary;
       }

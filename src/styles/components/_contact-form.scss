@@ -22,6 +22,11 @@
   margin-left: 10rem;
   margin-top: 3rem;
 
+  @include respond(tab-port) {
+    margin-left: 9rem;
+    margin-top: -3rem;
+  }
+
   &__heading {
     margin-top: -1.5rem;
     margin-bottom: 2rem;
@@ -69,7 +74,15 @@
 
 .contact-right {
   margin-top: 3rem;
+  @include respond(tab-port) {
+    margin-top: 5.8rem;
+    margin-left: -3rem;
+  }
   &__img {
     width: 69rem;
+
+    @include respond(tab-port) {
+      width: 64rem;
+    }
   }
 }

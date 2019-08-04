@@ -7,6 +7,8 @@ const elements = {
     nav: document.querySelector('nav'),
     navbar: document.querySelector('.navbar'),
     navItem: document.querySelectorAll('.navbar a'),
+    menu: document.querySelector('.navbar__nav'),
+    hamburgerMenu: document.querySelector('#hamburger'),
     sectionWork: document.querySelector('.section-work'),
     cursor: document.querySelector('.cursor'),
     cursorInner: document.querySelector('.cursor--inner'),
