@@ -422,20 +422,38 @@ nav {
       z-index: -1;
       margin-top: -1rem;
       left: -6rem; }
+      @media (max-width: 1200px) {
+        .about__right div {
+          width: 28rem;
+          height: 28rem; } }
+      @media (max-width: 900px) {
+        .about__right div {
+          margin-top: 2rem; } }
   .about__me {
     margin-top: -1rem;
     width: 32rem;
     height: 32rem;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: -30px -120px;
-       object-position: -30px -120px;
+    -o-object-position: 0px -120px;
+       object-position: 0px -120px;
     border-radius: 100%;
     background: rgba(156, 151, 157, 0.69);
     position: relative;
     padding: 5px;
     box-sizing: content-box;
     background: #fff; }
+    @media (max-width: 1200px) {
+      .about__me {
+        width: 28rem;
+        height: 28rem;
+        -o-object-position: 0px -100px;
+           object-position: 0px -100px; } }
+    @media (max-width: 900px) {
+      .about__me {
+        margin-top: 2rem;
+        -o-object-position: 0px -90px;
+           object-position: 0px -90px; } }
     .about__me::before {
       content: "";
       width: 100%;
@@ -446,16 +464,26 @@ nav {
       background: rgba(156, 151, 157, 0.69); }
   .about__title {
     font-size: 4rem; }
-    @media (max-width: 1440px) and (max-width: 900px) {
-      .about__title:first-child .about__title {
-        margin-bottom: -7rem; } }
+    @media (max-width: 1200px) {
+      .about__title:first-child {
+        margin-bottom: -4rem; } }
     .about__title--sm {
       margin: 5px 0;
       font-size: 2rem; }
+      @media (max-width: 1200px) {
+        .about__title--sm {
+          margin: -4rem 0; } }
   .about__text {
     color: #6c757d;
     line-height: 150%;
-    width: 80%; }
+    width: 80%;
+    font-size: 1.5rem; }
+    @media (max-width: 1200px) {
+      .about__text {
+        line-height: 130%; } }
+    @media (max-width: 900px) {
+      .about__text {
+        font-size: 1.95rem; } }
   .about #frontend {
     margin-bottom: 1rem; }
   .about__skill {
@@ -493,6 +521,11 @@ mark {
   color: white;
   padding: 2px 4px; }
 
+@media (max-width: 900px) {
+  mark.mark-about {
+    padding: 0 1px;
+    line-height: 135%; } }
+
 @media (min-width: 1440px) and (max-height: 900px) {
   .about__title--sm {
     margin: -6.2rem 0; }
@@ -503,7 +536,9 @@ mark {
   .about__title:first-child {
     margin-bottom: -10rem; }
   .about__title--sm {
-    margin: -8.5rem 0; } }
+    margin: -8.5rem 0; }
+  .about__text {
+    font-size: 1.4rem; } }
 
 section {
   height: 100vh;
