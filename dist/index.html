@@ -9,10 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+
 <link href="css/style.css" rel="stylesheet"></head>
 
 <body>
-
     <!-- Navbar -->
     <nav>
         <div class="navbar">
@@ -44,79 +47,276 @@
 
     <!-- =========sections===== -->
     <main>
+        <div class="cursor">
+            <div class="cursor--outer"></div>
+            <div class="cursor--inner"></div>
+        </div>
         <a id="section-brand"></a>
         <section class="section-brand">
-            <div>
-                <div class="intro">
-                    <div class="intro__left">
-                        <h1>
-                            <span>Hello!</span>
-                            <span>I'm Mohib,</span>
-                            <span class="dev-text">
-                                A
-                                <ul>
-                                    <li>passionate</li>
-                                    <li>self-taught</li>
-                                    <li>commited</li>
-                                </ul>
-                                MERN Developer.
-                            </span>
-                        </h1>
-                        <a class="btn btn--primary">See all work</a>
-                    </div>
-                    <div class="intro__right">
-                        <div class="intro__banner">
-                            <img src="img/6523ea1e450efa1949c4f2c6475b6d14.png" alt="banner" class="intro__img">
-                        </div>
-                    </div>
+            <div class="intro">
+                <div class="intro__sec intro__sec--left">
+                    <span href="javascript:void(0)" class="intro__scroll">
+                        scroll
+                        <span class="arrow arrow-infinite">&rarr;</span>
+                    </span>
                 </div>
+                <div class="intro__text">
+                    <span style="color:#fff">H<span class="e">E</span>L</span>
+                    <span>LO !</span>
+                </div>
+                <div class="intro__sec intro__sec--right"></div>
             </div>
         </section>
 
         <a id="section-work"></a>
         <section class="section-work">
-            <div>
-                <div class="projects-title">
+            <ul class="work">
+                <div class="circle circle-top"></div>
+                <div class="circle circle-bottom"></div>
+                <div class="work__carousel">
+                    <div id="project1">
+                        <div class="work__left work__left-animate">
+                            <div class="work__title">
+                                <span class="work__subheading">Project</span>
+                                <span class="work__mainheading">Dad Jokes App</span>
+                            </div>
+
+                            <div class="work__text">
+                                <mark>Tech Used -</mark>
+                                ReactJS
+                                <div>
+                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <span>|</span>
+                                    <a href="https://colt-dad-jokes.herokuapp.com/" target="_blank" class=" view">
+                                        VIEW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work__right work__right-animate">
+                            <div class="work__img-carousel">
+                                <img src="img/edefbe6b75e94695e681a4fb3de61b62.png" alt="dad-jokes-app">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project2">
+                        <div class="work__left">
+                            <div class="work__title">
+                                <span class="work__subheading">
+                                    Project
+                                </span>
+                                <span class="work__mainheading">Vidjot</span>
+                            </div>
+
+                            <div class="work__text">
+                                <mark>Tech Used -</mark>
+                                Html, Css, Bootstrap,Javascript,
+                                NodeJS, Express, MongoDB, PassportJS
+                                <div>
+                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <span>|</span>
+                                    <a href="https://brad-vidjot.herokuapp.com/" target="_blank" class=" view">
+                                        VIEW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work__right ">
+                            <div class="work__img-carousel">
+                                <img src="img/0e6c05524d07612208e5d83075e12f5c.png" alt="vidjot project">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project3">
+                        <div class="work__left">
+                            <div class="work__title">
+                                <span class="work__subheading">Project</span>
+                                <span class="work__mainheading">Natours</span>
+                            </div>
+
+                            <div class="work__text">
+                                <mark>Tech Used -</mark>
+                                Html, Scss
+                                <div>
+                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <span>|</span>
+                                    <a href="https://jonas-natour-project.herokuapp.com" target="_blank" class=" view">
+                                        VIEW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work__right">
+                            <div class="work__img-carousel">
+                                <img src="img/dec6a1a7aeefdc9fcf83c60accfd0e86.png" alt="natours project">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project4">
+                        <div class="work__left">
+                            <div class="work__title">
+                                <span class="work__subheading">Project</span>
+                                <span class="work__mainheading">Wikipedia Viewer</span>
+                            </div>
+
+                            <div class="work__text">
+                                <mark>Tech Used -</mark>
+                                Html, Scss, Javascript, Ajax
+                                <div>
+                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <span>|</span>
+                                    <a href="https://mohib-wikipedia-viewer.herokuapp.com/" target="_blank" class="
+                                        view">
+                                        VIEW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work__right">
+                            <div class="work__img-carousel">
+                                <img src="img/65ec64251d0ca2f56cf816a1f010f4eb.png" alt="wikipedia-viewer">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project5">
+                        <div class="work__left">
+                            <div class="work__title">
+                                <span class="work__subheading">Project</span>
+                                <span class="work__mainheading">Dad Jokes App</span>
+                            </div>
+
+                            <div class="work__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit autem placeat repudiandae
+                                ea
+                                animi
+                                nulla at commodi laudantium necessitatibus architecto, quae incidunt modi quidem saepe,
+                                consequuntur, vitae vero ullam. Repudiandae.
+                                <div>
+                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <span>|</span>
+                                    <a href="https://brad-vidjot.herokuapp.com/" target="_blank" class=" view">
+                                        VIEW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work__right">
+                            <div class="work__img-carousel">
+                                <img src="img/edefbe6b75e94695e681a4fb3de61b62.png" alt="dad-jokes-app">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project6">
+                        <div class="work__left">
+                            <div class="work__title">
+                                <span class="work__subheading">Project</span>
+                                <span class="work__mainheading">Dad Jokes App</span>
+                            </div>
+
+                            <div class="work__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit autem placeat repudiandae
+                                ea
+                                animi
+                                nulla at commodi laudantium necessitatibus architecto, quae incidunt modi quidem saepe,
+                                consequuntur, vitae vero ullam. Repudiandae.
+                                <div>
+                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <span>|</span>
+                                    <a href="https://brad-vidjot.herokuapp.com/" target="_blank" class=" view">
+                                        VIEW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work__right">
+                            <div class="work__img-carousel">
+                                <img src="img/edefbe6b75e94695e681a4fb3de61b62.png" alt="dad-jokes-app">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work__nav">
                     <ul>
-                        <li>Mohib's Portfolio</li>
-                        <li>The Social Network</li>
-                        <li>Ottica Grasso</li>
-                        <li>Sher</li>
-                        <li>Miti di Napoli</li>
+                        <li class="work-navbtn-active" data-workId="0"></li>
+                        <li data-workId="1"></li>
+                        <li data-workId="2"></li>
+                        <li data-workId="3"></li>
+                        <li data-workId="4"></li>
+                        <li data-workId="5"></li>
                     </ul>
                 </div>
-                <div class="projects-img">
 
-                </div>
-            </div>
         </section>
 
 
         <a id="section-about"></a>
         <section class="section-about">
-            <div>
-                This is about page
+            <div class="about">
+                <div class="circle circle-top"></div>
+                <div class="circle circle-bottom"></div>
+                <div class="about__top">
+                    <h2>About Me</h2>
+                    <span></span>
+                </div>
+                <div class="about__main">
+                    <div class="about__left">
+                        <h1 class="about__title">Mohib Arshi.</h1>
+                        <p class="about__text">
+                            Hello, my name is Mohib Arshi. <br /> <mark> I am a MERN stack developer with good designing
+                                skills. </mark><br />
+                            I have been learning web development since a year and very much dedicated to make myself
+                            gear up with some professional skills.<br />
+                            I want to learn all the new technologies related to web development and want to apply all my
+                            knowledge to create something which can have some positive impact on our world.<br />
+                            <mark>The
+                                Zero to
+                                One Mindset</mark>
+                        </p>
+                        <h1 class="about__title about__title--sm">Skills</h1>
+                        <div class="about__skills">
+                            <div id="frontend">
+                                <img class="about__skill" src="img/e7d1e4d56cde88f5ab4ff5d182ec0fd5.png">
+                                <img class="about__skill" src="img/b848d5d9bb221592064de0f356f61676.png">
+                                <img class="about__skill" src="img/c5793602af9331df693b132ca92b656e.png">
+                                <img class="about__skill" src="img/95752859cbbdee3bc65f7fecbf4cdf67.png">
+                                <img class="about__skill" src="img/47ce6e77f039020ee2e76a10c1e988e9.png">
+                                <img class="about__skill" src="img/515a82daeb80c805b8af3c0475708e0e.png">
+                                <img class="about__skill" src="img/cd11fe09014800fea73846d7e40ec331.png">
+                            </div>
+                            <div id="backend">
+                                <img class="about__skill" src="img/5b47d4f8d197911857e8e77cb4dd1569.png">
+                                <img class="about__skill" src="img/c1db29eb980c29ba88a032583fcc598e.png">
+                                <img class="about__skill" src="img/22a4b42328ad1cd3dbc210237db327ba.png">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__right">
+                        <img src="img/2f85fd702a75c9f45deaffc7e1322d40.jpg" alt="mohib-arshi-img" class="about__me">
+                        <div></div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <a id="section-contact"></a>
         <section class="section-contact">
-            <div>
-                <div class="contact">
-                    <div class="contact-left">
-                        <h2 class="contact-left__heading">Let's create <span style="display:block;">progress
-                                together!</span>
-                        </h2>
-                        <form class="contact-left__form">
-                            <input type="text" name="name" placeholder="Your name">
-                            <input type="email" name="email" placeholder="Your email">
-                            <textarea placeholder="Your message" rows="5" cols="50"></textarea>
-                            <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
-                        </form>
-                    </div>
-                    <div class="contact-right">
-                        <img src="img/85ae72e7d9168cb5170f1125ea781655.png" alt="contact illustratioin" class="contact-right__img">
-                    </div>
+            <div class="contact">
+                <div class="circle circle-top"></div>
+                <div class="circle circle-bottom"></div>
+                <div class="contact-left">
+                    <h2 class="contact-left__heading">Let's create <span style="display:block;">progress
+                            together!</span>
+                    </h2>
+                    <form class="contact-left__form">
+                        <input type="text" name="name" placeholder="Your name">
+                        <input type="email" name="email" placeholder="Your email">
+                        <textarea placeholder="Your message" rows="5" cols="50"></textarea>
+                        <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <img src="img/85ae72e7d9168cb5170f1125ea781655.png" alt="contact illustratioin" class="contact-right__img">
                 </div>
             </div>
         </section>
@@ -139,11 +339,6 @@
             <span class="footer-pagination__icon"><i class="fa fa-arrow-right"></i></span>
         </a>
     </div>
-
-
-
-    <script>
-    </script>
 
 <script type="text/javascript" src="js/bundle.js"></script></body>
 
