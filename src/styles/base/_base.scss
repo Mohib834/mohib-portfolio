@@ -8,6 +8,7 @@ body {
   cursor: none;
   @include respond(tab-port) {
     cursor: initial;
+    overflow: auto;
   }
 }
 
