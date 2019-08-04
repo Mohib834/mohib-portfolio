@@ -175,11 +175,12 @@ elements.navItem.forEach(function (item) {
 
 
 //Loader
-window.addEventListener('load', () => {
-    elements.footer.style.display = "flex";
-    elements.overlay.style.display = "none";
+$(window).on('load', () => {
+    $('.overlay').fadeOut(1000, () => {
+        $('.footer').css('display', 'flex');
+        $('body').css('opacity', '1');
+    })
 })
-
 
 
 

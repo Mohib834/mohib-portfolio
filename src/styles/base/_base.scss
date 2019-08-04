@@ -6,6 +6,8 @@
 body {
   overflow: hidden;
   cursor: none;
+  opacity: 0;
+  transition: opacity 0.5s;
   @include respond(tab-port) {
     cursor: initial;
     overflow: auto;

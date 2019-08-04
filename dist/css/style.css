@@ -97,7 +97,9 @@ $breakpoint argument Choice;
 
 body {
   overflow: hidden;
-  cursor: none; }
+  cursor: none;
+  opacity: 0;
+  transition: opacity 0.5s; }
   @media (max-width: 900px) {
     body {
       cursor: initial;
