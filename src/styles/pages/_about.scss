@@ -15,6 +15,11 @@
   position: relative;
   overflow: hidden;
 
+  @include respond(phone) {
+    width: 100%;
+    height: 100%;
+  }
+
   &__top {
     display: flex;
     flex-direction: column;
@@ -161,6 +166,10 @@
   width: 30rem;
   height: 30rem;
   position: absolute;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .circle-top {
@@ -174,6 +183,7 @@
   left: 0;
   clip-path: circle(33.9% at 6% 100%);
 }
+
 mark {
   background: #4430e0;
   color: white;

@@ -11,8 +11,13 @@
   padding: 3rem 7rem;
   box-shadow: $shadow-light;
   position: relative;
-  // background: $color-primary;
-  // color: #fff;
+
+  @include respond(phone) {
+    box-shadow: none;
+    height: 100%;
+    width: 100%;
+  }
+
   &__carousel {
     width: 100%;
     height: 100%;
@@ -97,6 +102,9 @@
     font-weight: 700;
     margin-bottom: 1rem;
     color: $color-primary;
+    @include respond(phone) {
+      font-size: 4rem;
+    }
   }
 
   &__mainheading {

@@ -5,6 +5,10 @@
   width: 90%;
   box-sizing: border-box;
   margin: 0 auto;
+  @include respond(phone) {
+    width: 100%;
+    height: 100%;
+  }
   &__text {
     position: absolute;
     top: 48%;

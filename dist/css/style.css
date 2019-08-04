@@ -388,7 +388,6 @@ nav {
     .navbar {
       justify-content: space-between;
       align-items: flex-start;
-      width: 100%;
       margin: initial; } }
   .navbar__brand {
     font-size: 2rem; }
@@ -498,6 +497,10 @@ nav {
   flex-direction: column;
   position: relative;
   overflow: hidden; }
+  @media (max-width: 600px) {
+    .about {
+      width: 100%;
+      height: 100%; } }
   .about__top {
     display: flex;
     flex-direction: column;
@@ -613,6 +616,9 @@ nav {
   width: 30rem;
   height: 30rem;
   position: absolute; }
+  @media (max-width: 600px) {
+    .circle {
+      display: none; } }
 
 .circle-top {
   top: 0;
@@ -657,6 +663,10 @@ mark {
   width: 90%;
   box-sizing: border-box;
   margin: 0 auto; }
+  @media (max-width: 600px) {
+    .intro {
+      width: 100%;
+      height: 100%; } }
   .intro__text {
     position: absolute;
     top: 48%;
@@ -714,6 +724,11 @@ mark {
   padding: 3rem 7rem;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   position: relative; }
+  @media (max-width: 600px) {
+    .work {
+      box-shadow: none;
+      height: 100%;
+      width: 100%; } }
   .work__carousel {
     width: 100%;
     height: 100%; }
@@ -783,6 +798,9 @@ mark {
     font-weight: 700;
     margin-bottom: 1rem;
     color: #4430e0; }
+    @media (max-width: 600px) {
+      .work__title {
+        font-size: 4rem; } }
   .work__mainheading {
     margin-left: -3px; }
   .work__subheading {
