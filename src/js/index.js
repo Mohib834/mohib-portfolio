@@ -174,6 +174,12 @@ elements.navItem.forEach(function (item) {
 })
 
 
+//Loader
+window.addEventListener('load', () => {
+    elements.footer.style.display = "flex";
+    elements.overlay.style.display = "none";
+})
+
 
 
 

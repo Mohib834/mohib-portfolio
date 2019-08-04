@@ -16,7 +16,9 @@ const elements = {
     anchors: document.querySelectorAll('a'),
     workCarousel: document.querySelectorAll('.work__carousel > div'),
     workNav: document.querySelectorAll('.work__nav ul li'),
-    homeTitleE: document.querySelector('.intro__text .e')
+    homeTitleE: document.querySelector('.intro__text .e'),
+    overlay: document.querySelector('.overlay'),
+    footer: document.querySelector('.footer'),
 }
 
 
