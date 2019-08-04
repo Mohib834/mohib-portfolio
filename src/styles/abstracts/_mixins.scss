@@ -1,1 +1,56 @@
+// @media(max-width:1440px) and (max-height:900px){
+//     .about__title{
+//         margin-bottom:-7rem;
+//     }
 
+//     .about__title--sm{
+//         margin:-6.2rem 0;
+//     }
+// }
+
+/*
+0 - 600px: phone;
+600px - 900px: tablet portrait;
+900px - 1200px: tablet landscape;
+1200 - 1800px :normal style apply;
+1800px +: big desktop;
+*/
+/*
+$breakpoint argument Choice;
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop-md {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
