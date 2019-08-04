@@ -1,3 +1,10 @@
+.section-contact {
+  height: 100vh;
+  @include respond(phone) {
+    height: 70vh;
+  }
+}
+
 .contact {
   // max-width: 114rem;
   display: flex;
@@ -16,6 +23,7 @@
     width: 100%;
     height: 100%;
     box-shadow: none;
+    margin-top: -12rem;
   }
 }
 
@@ -33,11 +41,20 @@
     margin-top: -3rem;
   }
 
+  @include respond(phone) {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
   &__heading {
     margin-top: -1.5rem;
     margin-bottom: 2rem;
     margin-left: -1rem;
     font-size: 3.5rem;
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &__form {
@@ -83,6 +100,10 @@
   @include respond(tab-port) {
     margin-top: 5.8rem;
     margin-left: -3rem;
+  }
+
+  @include respond(phone) {
+    display: none;
   }
   &__img {
     width: 69rem;

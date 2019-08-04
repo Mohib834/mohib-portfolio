@@ -164,6 +164,12 @@ elements.hamburgerMenu.onclick = function () {
     elements.menu.classList.toggle('mobile-menu');
 }
 
+elements.navItem.forEach(function (item) {
+    item.addEventListener('click', function () {
+        elements.hamburgerMenu.onclick();
+    })
+})
+
 
 
 

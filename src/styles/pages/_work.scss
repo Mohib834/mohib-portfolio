@@ -1,6 +1,12 @@
 .section-work {
   width: 100vw;
   height: 100vh;
+
+  @include respond(phone) {
+    width: initial;
+    margin-top: -8rem;
+    margin-bottom: -8rem;
+  }
 }
 
 .work {
@@ -14,7 +20,7 @@
 
   @include respond(phone) {
     box-shadow: none;
-    height: 100%;
+    height: 75%;
     width: 100%;
   }
 
@@ -31,6 +37,13 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include respond(phone) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: initial;
+      }
     }
   }
 
@@ -48,6 +61,13 @@
     &-animate {
       opacity: 1;
       visibility: visible;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 0;
+      align-items: center;
+      text-align: center;
     }
   }
 
@@ -67,6 +87,11 @@
       opacity: 1;
       visibility: visible;
     }
+    @include respond(phone) {
+      width: 100%;
+      margin-left: 0;
+      transform: translateX(0);
+    }
   }
 
   &__nav {
@@ -84,10 +109,13 @@
         margin-bottom: 1rem;
         width: 1rem;
         height: 1rem;
-        margin-right: 2rem;
         border-radius: 100px;
         background: rgba($color-text-grey, 0.7);
         transition: all 0.4s;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
       }
 
       .work-navbtn-active {
@@ -109,12 +137,18 @@
 
   &__mainheading {
     margin-left: -3px;
+    @include respond(phone) {
+      margin-left: 0;
+    }
   }
 
   &__subheading {
     font-size: 2rem;
     display: block;
     text-transform: uppercase;
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__text {
@@ -125,7 +159,9 @@
       display: flex;
       align-items: flex-end;
       color: $color-primary;
-
+      @include respond(phone) {
+        justify-content: center;
+      }
       span {
         margin: 0 1rem;
       }

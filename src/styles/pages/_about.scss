@@ -1,6 +1,10 @@
 .section-about {
   width: 100vw;
   height: 100vh;
+
+  @include respond(phone) {
+    width: initial;
+  }
 }
 
 .about {
@@ -16,15 +20,22 @@
   overflow: hidden;
 
   @include respond(phone) {
+    margin-top: 1rem;
     width: 100%;
     height: 100%;
     box-shadow: none;
+    padding: 0;
+    text-align: center;
   }
 
   &__top {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+
+    @include respond(phone) {
+      display: none;
+    }
     h2 {
       font-size: 16px;
       padding-bottom: 2px;
@@ -41,6 +52,10 @@
   &__main {
     display: flex;
     height: 100%;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -72,6 +87,10 @@
       @include respond(tab-port) {
         margin-top: 2rem;
       }
+
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
 
@@ -97,6 +116,12 @@
     @include respond(tab-port) {
       margin-top: 2rem;
       object-position: 0px -90px;
+    }
+
+    @include respond(phone) {
+      width: 22rem;
+      height: 22rem;
+      object-position: 0px -70px;
     }
 
     &::before {
@@ -141,10 +166,21 @@
     @include respond(tab-port) {
       font-size: 1.95rem;
     }
+
+    @include respond(phone) {
+      width: 100%;
+      margin: 6rem 0;
+    }
   }
 
   #frontend {
     margin-bottom: 1rem;
+  }
+
+  &__skills {
+    @include respond(phone) {
+      margin-top: 5rem;
+    }
   }
 
   &__skill {
