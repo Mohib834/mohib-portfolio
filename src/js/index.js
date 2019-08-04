@@ -166,7 +166,10 @@ elements.hamburgerMenu.onclick = function () {
 
 elements.navItem.forEach(function (item) {
     item.addEventListener('click', function () {
-        elements.hamburgerMenu.onclick();
+        const isDisplay = getComputedStyle(elements.hamburgerMenu).display
+        if (isDisplay === 'block') {
+            elements.hamburgerMenu.onclick();
+        }
     })
 })
 
