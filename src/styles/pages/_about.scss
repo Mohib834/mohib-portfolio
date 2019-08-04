@@ -150,23 +150,21 @@ mark {
 }
 
 // MEDIA QUERIES
-
-@media (max-width: 1920px) and (max-height: 1080px) {
-  .about__title:first-child {
-    margin-bottom: -10rem;
-  }
-
-  .about__title--sm {
-    margin: -8.5rem 0;
-  }
-}
-
-@media (max-width: 1440px) and (max-height: 900px) {
+@media (min-width: 1440px) and (max-height: 900px) {
   .about__title--sm {
     margin: -6.2rem 0;
   }
 
   .about__title:first-child {
     margin-bottom: -6rem;
+  }
+}
+@media (min-width: 1920px) and (max-height: 1080px) {
+  .about__title:first-child {
+    margin-bottom: -10rem;
+  }
+
+  .about__title--sm {
+    margin: -8.5rem 0;
   }
 }
