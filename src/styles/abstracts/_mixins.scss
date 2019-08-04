@@ -32,12 +32,6 @@ $breakpoint argument Choice;
     }
   }
 
-  @if $breakpoint == laptop-md {
-    @media (max-width: 1400px) {
-      @content;
-    }
-  }
-
   @if $breakpoint == big-desktop {
     @media (min-width: 1800px) {
       @content;

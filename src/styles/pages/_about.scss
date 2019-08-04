@@ -87,7 +87,7 @@
   &__title {
     font-size: 4rem;
     &:first-child {
-      @include respond(big-desktop) {
+      @media (max-width: 1440px) and (max-width: 900px) {
         .about__title {
           margin-bottom: -7rem;
         }
@@ -97,10 +97,6 @@
     &--sm {
       margin: 5px 0;
       font-size: 2rem;
-
-      @include respond(laptop-md) {
-        margin: -6.2rem 0;
-      }
     }
   }
 
@@ -151,4 +147,26 @@ mark {
   background: #4430e0;
   color: white;
   padding: 2px 4px;
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 1920px) and (max-height: 1080px) {
+  .about__title:first-child {
+    margin-bottom: -10rem;
+  }
+
+  .about__title--sm {
+    margin: -8.5rem 0;
+  }
+}
+
+@media (max-width: 1440px) and (max-height: 900px) {
+  .about__title--sm {
+    margin: -6.2rem 0;
+  }
+
+  .about__title:first-child {
+    margin-bottom: -6rem;
+  }
 }

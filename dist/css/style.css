@@ -1,3 +1,17 @@
+/*
+0 - 600px: phone;
+600px - 900px: tablet portrait;
+900px - 1200px: tablet landscape;
+1200 - 1800px :normal style apply;
+1800px +: big desktop;
+*/
+/*
+$breakpoint argument Choice;
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
 @-webkit-keyframes change {
   0% {
     opacity: 0;
@@ -19,7 +33,6 @@
     opacity: 0;
     -webkit-transform: translateY(30px);
             transform: translateY(30px); } }
-
 @keyframes change {
   0% {
     opacity: 0;
@@ -102,6 +115,15 @@ section > div.showPage {
 
 html {
   font-size: 62.5%; }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Karla", sans-serif;
@@ -178,6 +200,7 @@ body {
 .contact {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   width: 90%;
   height: 75%;
@@ -423,6 +446,9 @@ nav {
       background: rgba(156, 151, 157, 0.69); }
   .about__title {
     font-size: 4rem; }
+    @media (max-width: 1440px) and (max-width: 900px) {
+      .about__title:first-child .about__title {
+        margin-bottom: -7rem; } }
     .about__title--sm {
       margin: 5px 0;
       font-size: 2rem; }
@@ -467,8 +493,20 @@ mark {
   color: white;
   padding: 2px 4px; }
 
+@media (max-width: 1920px) and (max-height: 1080px) {
+  .about__title:first-child {
+    margin-bottom: -10rem; }
+  .about__title--sm {
+    margin: -8.5rem 0; } }
+
+@media (max-width: 1440px) and (max-height: 900px) {
+  .about__title--sm {
+    margin: -6.2rem 0; }
+  .about__title:first-child {
+    margin-bottom: -6rem; } }
+
 section {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center; }
