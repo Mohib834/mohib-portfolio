@@ -86,11 +86,21 @@
 
   &__title {
     font-size: 4rem;
-    // margin-bottom: 1rem;
+    &:first-child {
+      @include respond(big-desktop) {
+        .about__title {
+          margin-bottom: -7rem;
+        }
+      }
+    }
 
     &--sm {
       margin: 5px 0;
       font-size: 2rem;
+
+      @include respond(laptop-md) {
+        margin: -6.2rem 0;
+      }
     }
   }
 
