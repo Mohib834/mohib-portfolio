@@ -98,8 +98,10 @@ $breakpoint argument Choice;
 body {
   overflow: hidden;
   cursor: none;
-  opacity: 0;
-  transition: opacity 0.5s; }
+  position: relative;
+  transition: all 0.5s;
+  position: relative;
+  height: 100vh; }
   @media (max-width: 900px) {
     body {
       cursor: initial;
@@ -152,13 +154,21 @@ section {
 .overlay {
   height: 100vh;
   width: 100vw;
-  background: #fff; }
-  .overlay img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: all 1s;
+  background: #fff;
+  z-index: 999; }
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 9999; }
 
 html {
   font-size: 62.5%; }

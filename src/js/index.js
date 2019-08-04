@@ -176,10 +176,15 @@ elements.navItem.forEach(function (item) {
 
 //Loader
 $(window).on('load', () => {
-    $('.overlay').fadeOut(1000, () => {
+    $('.loader').fadeOut('slow', () => {
+        $('.overlay').css({
+            'opacity': '0',
+            'zIndex': '-10'
+        })
+        $('body').css('height', 'initial');
         $('.footer').css('display', 'flex');
-        $('body').css('opacity', '1');
-    })
+
+    });
 })
 
 
