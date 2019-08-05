@@ -1,0 +1,26 @@
+svg.check-icon {
+  width: 50px;
+  display: block;
+  align-self: center;
+}
+
+.path {
+  stroke: #4430e0;
+  // stroke-width: 8px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  &.circle {
+    -webkit-animation: dash 1.7s ease-in-out;
+    animation: dash 1.7s ease-in-out;
+  }
+  &.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 1.7s 1s ease-in-out forwards;
+    animation: dash 1.7s 1s ease-in-out forwards;
+  }
+  &.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check 1.7s 1s ease-in-out forwards;
+    animation: dash-check 1.7s 1s ease-in-out forwards;
+  }
+}

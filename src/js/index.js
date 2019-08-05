@@ -2,6 +2,8 @@ import style from '../styles/main.scss';
 import { elements } from './view/base';
 import 'jquery';
 
+const API_URL = 'http://localhost:3000'
+
 const state = {
     pageIdx: 0,
     pageBtnTextArr: ['work', 'about', 'contact', 'top'],
@@ -15,13 +17,13 @@ elements.navItem.forEach((item, idx) => {
     item.addEventListener('click', function (e) {
         e.preventDefault();
 
-        if (this.innerText.toLowerCase() === 'resume') return;
-
-        elements.paginationBtnText.innerText = state.pageBtnTextArr[idx]
-        const pagePath = this.getAttribute('href');
-        document.querySelector(pagePath).scrollIntoView({ behavior: 'smooth' });
-
-
+        if (this.innerText.toLowerCase() === 'resume') {
+            window.location.href = `${API_URL}/resume`
+        } else {
+            elements.paginationBtnText.innerText = state.pageBtnTextArr[idx]
+            const pagePath = this.getAttribute('href');
+            document.querySelector(pagePath).scrollIntoView({ behavior: 'smooth' });
+        }
     })
 })
 
@@ -183,13 +185,61 @@ $(window).on('load', () => {
         })
         $('body').css('height', 'initial');
         $('.footer').css('display', 'flex');
-
     });
 })
 
 
 
+// Contact Form
+elements.contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
 
+    //catching form data
+    const formData = new FormData(this);
+    const name = formData.get('name'),
+        email = formData.get('email'),
+        message = formData.get('message');
+
+    const data = {
+        name,
+        email,
+        message
+    }
+
+
+    fetch(`${API_URL}/contact/new`, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.errors) {
+                for (let error in data.errors) {
+                    $(`#${error} i`).css('opacity', '1');
+                }
+            } else {
+                //making contact form light
+                $('.contact-left__heading').css('opacity', '0.5');
+                $(this).css('opacity', '0.5');
+                $('.contact-overlay').css('display', 'flex');
+                $('.contact-overlay h3').css('opacity', '1');
+
+                setTimeout(() => {
+                    $('.contact-overlay').css('display', 'none');
+                    $('.contact-left__heading').css('opacity', '1');
+                    $(this).css('opacity', '1');
+                    this.reset();
+                }, 4000);
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        })
+
+})
 
 

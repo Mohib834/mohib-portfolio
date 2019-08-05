@@ -19,6 +19,7 @@ const elements = {
     homeTitleE: document.querySelector('.intro__text .e'),
     overlay: document.querySelector('.overlay'),
     footer: document.querySelector('.footer'),
+    contactForm:document.querySelector('.contact-left__form')
 }
 
 
