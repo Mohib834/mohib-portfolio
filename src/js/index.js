@@ -2,7 +2,7 @@ import style from '../styles/main.scss';
 import { elements } from './view/base';
 import 'jquery';
 
-const API_URL = 'http://localhost:3000'
+const API_URL = 'https://mohib-portfolio-api.herokuapp.com'
 
 const state = {
     pageIdx: 0,
