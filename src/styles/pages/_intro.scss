@@ -15,8 +15,17 @@
     left: 50%;
     transform: translate(-50%, -48%);
     font-size: 7rem;
+    @include respond(phone-md) {
+      font-size: 5rem;
+      letter-spacing: 2px;
+    }
+
+    @include respond(phone-sm) {
+      font-size: 4rem;
+      letter-spacing: 3px;
+    }
     .e {
-      transition: all 0.8s;
+      transition: all 0.8s 3s;
       display: inline-block;
     }
 

@@ -1,7 +1,7 @@
 .section-contact {
   height: 100vh;
   @include respond(phone) {
-    height: 70vh;
+    height: 52vh;
   }
 }
 
@@ -71,6 +71,11 @@
     font-size: 3.5rem;
     @include respond(phone) {
       text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+    @include respond(phone-sm) {
+      font-size: 2rem;
     }
   }
 
@@ -81,6 +86,10 @@
     margin-top: 1rem;
     width: 40rem;
     margin-left: -2.5rem;
+
+    @include respond(phone-sm) {
+      width: 27rem;
+    }
 
     & > div {
       width: 100%;
@@ -128,6 +137,15 @@
 
     button {
       margin-left: 1.5rem;
+
+      @include respond(phone) {
+        margin-left: 2.1rem;
+      }
+
+      @include respond(phone-sm) {
+        border-radius: initial;
+        width: 25rem;
+      }
     }
   }
 }

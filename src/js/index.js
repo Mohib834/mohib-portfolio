@@ -224,6 +224,8 @@ elements.contactForm.addEventListener('submit', async function (e) {
                 for (let error in data.errors) {
                     $(`#${error} i`).css('opacity', '1');
                 }
+                $('.contact-left__heading').css('opacity', '1');
+                $(this).css('opacity', '1');
             } else {
                 $('.contact-overlay').css('display', 'flex');
                 $('.contact-overlay h3').css('opacity', '1');

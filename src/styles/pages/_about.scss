@@ -149,6 +149,13 @@
 
       @include respond(tab-land) {
         margin: -4rem 0;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+
+      @include respond(phone-sm) {
+        margin: -2rem 0;
+        font-size: 2.3rem;
       }
     }
   }
@@ -169,7 +176,6 @@
 
     @include respond(phone) {
       width: 100%;
-      margin: 6rem 0;
     }
   }
 
@@ -177,17 +183,22 @@
     margin-bottom: 1rem;
   }
 
-  &__skills {
-    @include respond(phone) {
-      margin-top: 5rem;
-    }
-  }
-
   &__skill {
     width: 3.5rem;
     height: 3.5rem;
     object-fit: contain;
     transition: all 0.2s;
+
+    @include respond(phone) {
+      width: 4.5rem;
+      height: 5rem;
+    }
+
+    @include respond(phone-sm) {
+      width: 3rem;
+      height: 3rem;
+    }
+
     &:not(:first-child) {
       margin-left: 1.5rem;
     }

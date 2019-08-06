@@ -43,6 +43,14 @@ section {
   @include respond(phone) {
     height: 50vh;
   }
+
+  @include respond(phone-md) {
+    height: 35vh;
+  }
+
+  @include respond(phone-sm) {
+    height: 27vh;
+  }
 }
 
 .section {
@@ -70,6 +78,14 @@ section {
 
     @include respond(phone) {
       display: flex;
+    }
+
+    @include respond(phone-md) {
+      font-size: 3.5rem;
+    }
+
+    @include respond(phone-sm) {
+      font-size: 2.8rem;
     }
   }
 }

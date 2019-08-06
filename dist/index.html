@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#" class="navbar__link">
+                    <a href="https://mohib-portfolio-api.herokuapp.com/resume" class="navbar__link">
                         Resume
                     </a>
                 </li>
@@ -99,7 +99,8 @@
                                 <mark>Tech Used -</mark>
                                 ReactJS
                                 <div>
-                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <a href="https://github.com/Mohib834/colt-dad-jokes-app" class="view">CODE
+                                        &lt;/&gt;</a>
                                     <span>|</span>
                                     <a href="https://colt-dad-jokes.herokuapp.com/" target="_blank" class=" view">
                                         VIEW
@@ -127,9 +128,10 @@
                                 Html, Css, Bootstrap,Javascript,
                                 NodeJS, Express, MongoDB, PassportJS
                                 <div>
-                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <a href="https://github.com/Mohib834/brad-vidjot-project" class="view">CODE
+                                        &lt;/&gt;</a>
                                     <span>|</span>
-                                    <a href="https://brad-vidjot.herokuapp.com/" target="_blank" class=" view">
+                                    <a href="https://mohib-vidjot.herokuapp.com/" target="_blank" class=" view">
                                         VIEW
                                     </a>
                                 </div>
@@ -152,7 +154,8 @@
                                 <mark>Tech Used -</mark>
                                 Html, Scss
                                 <div>
-                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <a href="https://github.com/Mohib834/jonas-natours-project" class="view">CODE
+                                        &lt;/&gt;</a>
                                     <span>|</span>
                                     <a href="https://jonas-natour-project.herokuapp.com" target="_blank" class=" view">
                                         VIEW
@@ -177,7 +180,8 @@
                                 <mark>Tech Used -</mark>
                                 Html, Scss, Javascript, Ajax
                                 <div>
-                                    <a href="#" class="view">CODE &lt;/&gt;</a>
+                                    <a href="https://github.com/Mohib834/wikipedia_viewer" class="view">CODE
+                                        &lt;/&gt;</a>
                                     <span>|</span>
                                     <a href="https://mohib-wikipedia-viewer.herokuapp.com/" target="_blank" class="
                                         view">
@@ -192,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="project5">
+                    <!-- <div id="project5">
                         <div class="work__left">
                             <div class="work__title">
                                 <span class="work__subheading">Project</span>
@@ -247,7 +251,7 @@
                                 <img src="img/edefbe6b75e94695e681a4fb3de61b62.png" alt="dad-jokes-app">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="work__nav">
                     <ul>
@@ -255,16 +259,15 @@
                         <li data-workId="1"></li>
                         <li data-workId="2"></li>
                         <li data-workId="3"></li>
-                        <li data-workId="4"></li>
-                        <li data-workId="5"></li>
+                        <!-- <li data-workId="4"></li>
+                        <li data-workId="5"></li> -->
                     </ul>
                 </div>
-
         </section>
 
 
         <a id="section-about"></a>
-        <h1 class="section__mobile-heading">
+        <h1 class="section__mobile-heading" style="margin:0 auto">
             <span></span>
             ABOUT
             <span></span>
@@ -320,7 +323,7 @@
         </section>
 
         <a id="section-contact"></a>
-        <h1 class="section__mobile-heading">
+        <h1 class="section__mobile-heading" style="margin:30px 0">
             <span></span>
             CONTACT
             <span></span>
@@ -331,14 +334,38 @@
                 <div class="circle circle-top"></div>
                 <div class="circle circle-bottom"></div>
                 <div class="contact-left">
+                    <div class="contact-overlay">
+                        <!-- Check icon -->
+                        <svg class="check-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 130.2 130.2">
+                            <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6"
+                                stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                            <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6"
+                                stroke-linecap="round" stroke-miterlimit="10"
+                                points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+                        </svg>
+                        <h3>Message Delivered !</h3>
+                    </div>
                     <h2 class="contact-left__heading">Let's create <span style="display:block;">progress
                             together!</span>
                     </h2>
                     <form class="contact-left__form">
-                        <input type="text" name="name" placeholder="Your name">
-                        <input type="email" name="email" placeholder="Your email">
-                        <textarea placeholder="Your message" rows="5" cols="50"></textarea>
-                        <button class="form-btn"><i class="fas fa-paper-plane"></i>Send message</button>
+                        <div id="name">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <input type="text" name="name" placeholder="Your name"
+                                onfocus="this.previousElementSibling.style.opacity = '0'">
+                        </div>
+                        <div id="email">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <input type="email" name="email" placeholder="Your email"
+                                onfocus="this.previousElementSibling.style.opacity = '0'">
+                        </div>
+                        <div id="message">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <textarea placeholder="Your message" rows="5" cols="50" name="message"
+                                onfocus="this.previousElementSibling.style.opacity = '0'"></textarea>
+                        </div>
+                        <button class="form-btn" type="submit"><i class="fas fa-paper-plane"></i>Send message</button>
                     </form>
                 </div>
                 <div class="contact-right">

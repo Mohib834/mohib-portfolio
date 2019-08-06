@@ -6,6 +6,14 @@
     width: initial;
     margin-top: -8rem;
     margin-bottom: -8rem;
+    height: 80vh;
+  }
+
+  @include respond(phone-md) {
+    height: 68vh;
+  }
+  @include respond(phone-sm) {
+    height: 64vh;
   }
 }
 
@@ -68,6 +76,7 @@
       margin-top: 0;
       align-items: center;
       text-align: center;
+      padding-top: 1.5rem;
     }
   }
 
@@ -99,7 +108,9 @@
     bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
-
+    @include respond(phone) {
+      bottom: 4.5rem;
+    }
     ul {
       display: flex;
       justify-content: center;
@@ -133,6 +144,10 @@
     @include respond(phone) {
       font-size: 4rem;
     }
+
+    @include respond(phone-sm) {
+      font-size: 3rem;
+    }
   }
 
   &__mainheading {
@@ -155,6 +170,9 @@
     line-height: 150%;
     font-size: 1.7rem;
     color: $color-text-grey;
+    @include respond(phone) {
+      line-height: 170%;
+    }
     div {
       display: flex;
       align-items: flex-end;
