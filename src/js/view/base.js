@@ -10,6 +10,7 @@ const elements = {
     menu: document.querySelector('.navbar__nav'),
     hamburgerMenu: document.querySelector('#hamburger'),
     sectionWork: document.querySelector('.section-work'),
+    sectionContact: document.querySelector('.section-contact'),
     cursor: document.querySelector('.cursor'),
     cursorInner: document.querySelector('.cursor--inner'),
     cursorOuter: document.querySelector('.cursor--outer'),
@@ -19,7 +20,8 @@ const elements = {
     homeTitleE: document.querySelector('.intro__text .e'),
     overlay: document.querySelector('.overlay'),
     footer: document.querySelector('.footer'),
-    contactForm:document.querySelector('.contact-left__form')
+    contactForm: document.querySelector('.contact-left__form'),
+    btns: document.querySelectorAll('button')
 }
 
 

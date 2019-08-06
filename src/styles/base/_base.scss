@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+html,
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
 body {
   overflow: hidden;
   cursor: none;
@@ -14,6 +20,8 @@ body {
   @include respond(tab-port) {
     cursor: initial;
     overflow: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
     padding: 2rem;
   }
 }
@@ -40,6 +48,11 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include respond(tab-port) {
+    width: initial !important;
+  }
+
   @include respond(phone) {
     height: 50vh;
   }
@@ -86,6 +99,11 @@ section {
 
     @include respond(phone-sm) {
       font-size: 2.8rem;
+    }
+
+    @media (max-width: 320px) {
+      font-size: 2.4rem;
+      margin: 3rem;
     }
   }
 }

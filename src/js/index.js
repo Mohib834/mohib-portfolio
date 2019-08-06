@@ -11,6 +11,15 @@ const state = {
     lastTime: 0
 }
 
+const rotateArrowIcon = () => {
+    //changing arrow icon direction
+    if (elements.paginationBtnText.innerText === 'top') {
+        elements.paginationBtnIcon.classList.add('rotateTop');
+    } else {
+        elements.paginationBtnIcon.classList.remove('rotateTop');
+    }
+}
+
 // Page scroll and menu navigation (navbar)
 
 elements.navItem.forEach((item, idx) => {
@@ -21,9 +30,11 @@ elements.navItem.forEach((item, idx) => {
             window.location.href = `${API_URL}/resume`
         } else {
             elements.paginationBtnText.innerText = state.pageBtnTextArr[idx]
-            const pagePath = this.getAttribute('href');
+            let pagePath = this.getAttribute('href');
             document.querySelector(pagePath).scrollIntoView({ behavior: 'smooth' });
+            rotateArrowIcon();
         }
+
     })
 })
 
@@ -34,12 +45,10 @@ const showPage = (num) => {
     if (num === 1) {
         //when scroll down
         state.pageIdx !== elements.sections.length - 1 ? state.pageIdx += 1 : state.pageIdx = 0;
-        state.pageIdx === elements.sections.length - 1 ? elements.paginationBtnIcon.classList.add('rotateTop') : elements.paginationBtnIcon.classList.remove('rotateTop');
     } else if (num === -1) {
         //when scroll up
         if (state.pageIdx === 0) return;
         state.pageIdx += num;
-        state.pageIdx === elements.sections.length - 1 ? elements.paginationBtnIcon.classList.add('rotateTop') : elements.paginationBtnIcon.classList.remove('rotateTop');
     }
 
     //Changing pagination text
@@ -54,11 +63,12 @@ const showPage = (num) => {
     })
     //Showing the current section
     elements.sections[state.pageIdx].children[0].classList.add('showPage');
+    //Rotating arrow icon
+    rotateArrowIcon()
 }
 
-//Showing the first page on load
+//Animating the E of title on load
 window.onload = () => {
-    elements.sections[0].children[0].classList.add('showPage');
     elements.homeTitleE.style.transform = 'rotateY(720deg)';
 }
 
@@ -117,7 +127,8 @@ document.addEventListener('mousemove', e => {
 //Expansion of cursor on anchor
 const onElExp = {
     anchors: elements.anchors,
-    workNavLinks: elements.workNav
+    workNavLinks: elements.workNav,
+    button: elements.btns
 }
 
 for (let el in onElExp) {

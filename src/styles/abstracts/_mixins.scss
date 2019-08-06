@@ -13,6 +13,8 @@ $breakpoint argument Choice;
 -big-desktop
 */
 
+// 320px - iphone 5s
+
 @mixin respond($breakpoint) {
   @if $breakpoint == phone-sm {
     @media (max-width: 330px) {

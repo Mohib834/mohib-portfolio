@@ -3,6 +3,10 @@
   @include respond(phone) {
     height: 52vh;
   }
+
+  @media (max-width: 320px) {
+    height: 64vh;
+  }
 }
 
 .contact {

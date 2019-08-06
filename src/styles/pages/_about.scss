@@ -55,6 +55,7 @@
 
     @include respond(phone) {
       flex-direction: column;
+      margin-top: -4rem;
     }
   }
 
@@ -68,6 +69,14 @@
   &__right {
     flex: 1;
     position: relative;
+    @media (max-width: 750px) {
+      margin-right: -7rem;
+    }
+
+    @include respond(phone) {
+      margin-right: 0;
+    }
+
     div {
       width: 32rem;
       height: 32rem;
@@ -86,6 +95,11 @@
 
       @include respond(tab-port) {
         margin-top: 2rem;
+      }
+
+      @media (max-width: 750px) {
+        width: 24rem;
+        height: 24rem;
       }
 
       @include respond(phone) {
@@ -118,6 +132,11 @@
       object-position: 0px -90px;
     }
 
+    @media (max-width: 750px) {
+      width: 24rem;
+      height: 24rem;
+    }
+
     @include respond(phone) {
       width: 22rem;
       height: 22rem;
@@ -140,6 +159,9 @@
     &:first-child {
       @include respond(tab-land) {
         margin-bottom: -4rem;
+      }
+      @include respond(phone-sm) {
+        margin-bottom: -2rem;
       }
     }
 
@@ -171,11 +193,16 @@
     }
 
     @include respond(tab-port) {
-      font-size: 1.95rem;
+      // font-size: 1.95rem;
     }
 
     @include respond(phone) {
       width: 100%;
+      margin-top: -3rem;
+    }
+
+    @media (max-width: 320px) {
+      font-size: 1.2rem;
     }
   }
 

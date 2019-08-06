@@ -3,8 +3,14 @@ nav {
   width: 100vw;
   z-index: 1;
   transition: all 0.3s;
+  @include respond(tab-port) {
+    position: static;
+    width: initial;
+  }
   @include respond(phone) {
     position: static;
+    width: 100vw;
+    height: 19rem;
   }
 }
 
@@ -16,11 +22,11 @@ nav {
   padding: 2rem;
   background: #fff;
   position: relative;
-  // border-bottom: 1px solid #eee;
+
   @include respond(phone) {
     justify-content: space-between;
     align-items: flex-start;
-    margin: initial;
+    margin-left: -0.8rem;
   }
   &__brand {
     font-size: 2rem;
@@ -71,4 +77,8 @@ nav {
       padding-right: 0;
     }
   }
+}
+
+.rotateTop {
+  transform: rotateZ(-90deg);
 }

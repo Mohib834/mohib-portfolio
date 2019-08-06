@@ -1,3 +1,9 @@
+.section-brand {
+  @include respond(tab-port) {
+    margin-top: -10rem;
+  }
+}
+
 .intro {
   position: relative;
   display: flex;
