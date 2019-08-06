@@ -53,7 +53,7 @@
   // box-shadow: $shadow-light;
   height: 33rem;
   margin-left: 14rem;
-  margin-top: 3rem;
+  margin-top: -1rem;
   @include respond(tab-port) {
     margin-left: 9rem;
     margin-top: -3rem;
