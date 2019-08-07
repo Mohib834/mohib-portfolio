@@ -221,6 +221,7 @@ elements.contactForm.addEventListener('submit', async function (e) {
     //making contact form light as user clicks on submit
     $('.contact-left__heading').css('opacity', '0.5');
     $(this).css('opacity', '0.5');
+    $('.form-btn').css('pointer-events', 'none');
 
     fetch(`${API_URL}/contact/new`, {
         method: 'POST',
@@ -237,6 +238,7 @@ elements.contactForm.addEventListener('submit', async function (e) {
                 }
                 $('.contact-left__heading').css('opacity', '1');
                 $(this).css('opacity', '1');
+                $('.form-btn').css('pointer-events', 'auto');
             } else {
                 $('.contact-overlay').css('display', 'flex');
                 $('.contact-overlay h3').css('opacity', '1');
@@ -245,6 +247,7 @@ elements.contactForm.addEventListener('submit', async function (e) {
                     $('.contact-overlay').css('display', 'none');
                     $('.contact-left__heading').css('opacity', '1');
                     $(this).css('opacity', '1');
+                    $('.form-btn').css('pointer-events', 'auto');
                     this.reset();
                 }, 4000);
             }
