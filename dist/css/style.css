@@ -790,8 +790,8 @@ nav {
     height: 32rem;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 0px -120px;
-       object-position: 0px -120px;
+    -o-object-position: 0 -34px;
+       object-position: 0 -34px;
     border-radius: 100%;
     background: rgba(156, 151, 157, 0.69);
     position: relative;
@@ -801,14 +801,10 @@ nav {
     @media (max-width: 1200px) {
       .about__me {
         width: 28rem;
-        height: 28rem;
-        -o-object-position: 0px -100px;
-           object-position: 0px -100px; } }
+        height: 28rem; } }
     @media (max-width: 900px) {
       .about__me {
-        margin-top: 2rem;
-        -o-object-position: 0px -90px;
-           object-position: 0px -90px; } }
+        margin-top: 2rem; } }
     @media (max-width: 750px) {
       .about__me {
         width: 24rem;
@@ -817,8 +813,8 @@ nav {
       .about__me {
         width: 22rem;
         height: 22rem;
-        -o-object-position: 0px -70px;
-           object-position: 0px -70px; } }
+        -o-object-fit: 0 -13px;
+           object-fit: 0 -13px; } }
     .about__me::before {
       content: "";
       width: 100%;

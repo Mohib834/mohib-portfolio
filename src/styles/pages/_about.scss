@@ -113,7 +113,7 @@
     width: 32rem;
     height: 32rem;
     object-fit: cover;
-    object-position: 0px -120px;
+    object-position: 0 -34px;
     border-radius: 100%;
     background: rgba(#9c979d, 0.69);
     position: relative;
@@ -124,12 +124,10 @@
     @include respond(tab-land) {
       width: 28rem;
       height: 28rem;
-      object-position: 0px -100px;
     }
 
     @include respond(tab-port) {
       margin-top: 2rem;
-      object-position: 0px -90px;
     }
 
     @media (max-width: 750px) {
@@ -140,7 +138,7 @@
     @include respond(phone) {
       width: 22rem;
       height: 22rem;
-      object-position: 0px -70px;
+      object-fit: 0 -13px;
     }
 
     &::before {
