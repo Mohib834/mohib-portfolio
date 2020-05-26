@@ -1,6 +1,7 @@
 import style from '../styles/main.scss';
 import { elements } from './view/base';
 import 'jquery';
+// import './lib/full-page-scroll';
 
 const API_URL = 'https://mohib-portfolio-api.herokuapp.com'
 
@@ -77,8 +78,7 @@ elements.paginationBtn.addEventListener('click', () => {
     showPage(1);
 });
 
-window.addEventListener('wheel', e => {
-
+const handleScroll = (e) => {
     const wheelDelta = e.wheelDelta;
     //Getting current time;
     const currentTime = new Date().getTime();
@@ -96,8 +96,10 @@ window.addEventListener('wheel', e => {
     }
     //setting last time;
     state.lastTime = currentTime;
-})
+}
 
+window.addEventListener('wheel', handleScroll)
+window.addEventListener('scroll',handleScroll)
 //=====================
 
 

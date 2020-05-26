@@ -790,8 +790,8 @@ nav {
     height: 32rem;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 0 -34px;
-       object-position: 0 -34px;
+    -o-object-position: 0px 0px;
+       object-position: 0px 0px;
     border-radius: 100%;
     background: rgba(156, 151, 157, 0.69);
     position: relative;
